@@ -12,7 +12,7 @@ A Movie List App for users to list their favourite movies with IMDB Rating and P
 ---
 ## Demo
 
-
+![movies-list](https://user-images.githubusercontent.com/93823982/142825795-a59eb595-d278-454a-b375-b7930af3edb7.gif)
 
 ---
 ### Features
