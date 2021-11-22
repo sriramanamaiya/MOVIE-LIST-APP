@@ -29,8 +29,8 @@ const MovieCard = (props) => {
                     <img 
                         src={ source.includes('amazon') ? source : `http://image.tmdb.org/t/p/w185${source}`} 
                         alt={name} 
-                        width="75%" 
-                        height="180"  
+                        width="100%" 
+                        height="150"  
                     />
                 </CardContent>
                 <Box>
