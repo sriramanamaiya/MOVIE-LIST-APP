@@ -2,7 +2,7 @@
 
 A Movie List App for users to list their favourite movies with IMDB Rating and Poster.
 
-### 🛠️ Tech Stark
+### 🛠️ Tech Stack
 
 - 💻 JavaScript | ES6
 - 🌐 React JS
