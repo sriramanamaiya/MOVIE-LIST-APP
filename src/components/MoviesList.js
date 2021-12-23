@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { Grid, CircularProgress, Box } from '@mui/material'
+import { Grid, CircularProgress, Box, Alert } from '@mui/material'
 
 import { deleteMovie } from '../actions/movieActions'
 
@@ -60,6 +60,7 @@ const MoviesList = (props) => {
             ) : ( 
                 <>
                     <MoviesSortSearch movies={movies} handleSearch={handleSearch} sortMovies={sortMovies} />
+                    { movies.length === 0 && <Alert variant="outlined" severity="warning" sx={{ mt : 2 }}>No Movies Found 🎬🎦</Alert> }
                     <Grid container>
                         { movies.map((movie) => {
                             return <MovieCard key={movie.id} {...movie} handleRemoveMovie={handleRemoveMovie} />

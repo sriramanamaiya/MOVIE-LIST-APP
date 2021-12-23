@@ -17,7 +17,7 @@ const MoviesContainer = (props) => {
 
     useEffect(() => {
         const userData = JSON.parse(localStorage.getItem('data'))
-        console.log(5,userData)
+        
         if(userData){
             dispatch(pageReload(userData))
         }
@@ -28,21 +28,19 @@ const MoviesContainer = (props) => {
     },[movies])
 
     return (
-        <>
-            <Grid container columnSpacing={12} >
-                <Grid item xs={8}>
-                    { movies.length === 0 ? (
-                        <Alert severity="info">No Movie Added. Add New Movie ..👍</Alert>
-                    ) : (
-                        <MoviesList />
-                    ) }
-                </Grid>
-                <Grid item xs={4}>
-                    <MovieForm />
-                    { movies.length > 0 && <MovieStats />  }
-                </Grid>
+        <Grid container columnSpacing={12} >
+            <Grid item xs={8}>
+                { movies.length === 0 ? (
+                    <Alert severity="info">No Movie Added. Add New Movie ..👍</Alert>
+                ) : (
+                    <MoviesList />
+                ) }
             </Grid>
-        </>
+            <Grid item xs={4}>
+                <MovieForm />
+                { movies.length > 0 && <MovieStats />  }
+            </Grid>
+        </Grid>
     )
 }
 
